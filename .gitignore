@@ -1,0 +1,5 @@
+
+*.dll
+RestAPI/Catalog/bin/Debug/net5.0/
+RestAPI/Catalog/obj/
+
