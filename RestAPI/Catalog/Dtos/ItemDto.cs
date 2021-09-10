@@ -5,11 +5,20 @@ namespace Catalog.Dtos
     public record ItemDto
     {
         public Guid Id {get; init;} //Init: Solo le permitimos asignar un valor durante su inicializacion
+        public DateTimeOffset Fecha  {get; init;}
 
-        public string Name {get; init;}
+        public string correo {get; init;}
 
-        public decimal Price {get; init;}
+        public string p_apellido {get; init;}
 
-        public DateTimeOffset CreatedDate  {get; init;}
+        public int cedula {get; init;}
+
+        public string s_apellido {get; init;}
+
+        public string Nombre {get; init;}
+
+        public string contraseña {get; init;}
+
+         public int telefono {get; init;}
     }
 }

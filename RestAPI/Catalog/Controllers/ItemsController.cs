@@ -51,9 +51,14 @@ namespace Catalog.Controllers
             Item item = new()
             {
                 Id = Guid.NewGuid(),
-                Name = itemDto.Name,
-                Price = itemDto.Price,
-                CreatedDate = DateTimeOffset.UtcNow 
+                Nombre = itemDto.Nombre,
+                Fecha = DateTimeOffset.UtcNow, 
+                p_apellido = itemDto.p_apellido,
+                s_apellido = itemDto.s_apellido,
+                correo = itemDto.correo,
+                cedula = itemDto.cedula,
+                contraseña = itemDto.contraseña,
+                telefono = itemDto.telefono
             };
 
             repository.CreateItem(item); //Anadimos el objeto al repositorio
@@ -74,8 +79,7 @@ namespace Catalog.Controllers
             }
 
             Item updatedItem = existingItem with {
-                Name = itemDto.Name,
-                Price = itemDto.Price,
+                Nombre = itemDto.Nombre
             };
 
             repository.UpdateItem(updatedItem);

@@ -10,9 +10,14 @@ namespace Catalog
             return new ItemDto
             {
                 Id = item.Id,
-                Name = item.Name,
-                Price = item.Price,
-                CreatedDate = item.CreatedDate
+                Nombre = item.Nombre,
+                Fecha = item.Fecha,
+                p_apellido = item.p_apellido,
+                s_apellido = item.s_apellido,
+                correo = item.correo,
+                contraseña = item.contraseña,
+                telefono = item.telefono,
+                cedula = item.cedula
 
             };           
         }

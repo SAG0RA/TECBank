@@ -9,9 +9,7 @@ namespace Catalog.Repositorios
     {
         private readonly List<Item> items = new()
         {
-            new Item { Id = Guid.NewGuid(), Name = "Potion", Price = 9, CreatedDate = System.DateTimeOffset.Now },
-            new Item { Id = Guid.NewGuid(), Name = "Iron Sword", Price = 20, CreatedDate = System.DateTimeOffset.Now },
-            new Item { Id = Guid.NewGuid(), Name = "Bronze Shield", Price = 18, CreatedDate = System.DateTimeOffset.Now }
+            new Item { Id = Guid.NewGuid(), Nombre = "Steven", Fecha = System.DateTimeOffset.Now, correo = "stevencm199@gmail.com", cedula = 207950858, p_apellido = "Castro", s_apellido = "Medina", contraseña = "123456", telefono = 84261892}
 
         };
         

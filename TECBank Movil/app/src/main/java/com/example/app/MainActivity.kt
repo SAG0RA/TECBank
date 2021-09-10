@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
             val usuario = usuario_input.text.toString()
             val contrasena = contrasena_input.text.toString()
-            Log.d("NANIX2","peneeee " + usuario)
+            Log.d("NANIX2","asdsadaf " + usuario)
             for(i in usuarios_registrados.indices){
                 Log.d("NANI","onCreate users: " + usuarios_registrados.get(i))
 

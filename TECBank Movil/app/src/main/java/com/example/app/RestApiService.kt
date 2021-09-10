@@ -11,6 +11,7 @@ class RestApiService {
         retrofit.addUser(userData).enqueue(
             object : Callback<Usuarios> {
                 override fun onFailure(call: Call<Usuarios>, t: Throwable) {
+                    Log.d("Error de UsuarioJSON",t.message)
                     onResult(null)
                 }
                 override fun onResponse( call: Call<Usuarios>, response: Response<Usuarios>) {

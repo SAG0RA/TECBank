@@ -5,10 +5,18 @@ namespace Catalog.Dtos
     public record CreateItemDto
         {
             [Required]
-            public string Name {get; init;}
-
+            public string Nombre {get; init;}
             [Required]
-            [Range (1, 1000)]
-            public decimal Price {get; init;}
+            public string correo {get; init;}
+            [Required]
+            public string p_apellido {get; init;}
+            [Required]
+            public int cedula {get; init;}
+            [Required]
+            public string s_apellido {get; init;}
+            [Required]
+            public string contraseña {get; init;}
+            [Required]
+            public int telefono {get; init;}
         }
 }
