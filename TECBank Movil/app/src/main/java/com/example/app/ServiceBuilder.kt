@@ -4,10 +4,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceBuilder {
     private val client = OkHttpClient.Builder().build()
-
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://192.168.0.18") //https://localhost:5001/items
-            //https://2ef9c26f-b8f6-4095-8cca-589b14c7f3c4.mock.pstmn.io
+        .baseUrl("http://192.168.18.4:5000") //https://2bcf671a-742d-4c02-ad62-19bb8fbe0700.mock.pstmn.io //http://192.168.18.4:5000/
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()

@@ -53,38 +53,20 @@ class Registrarse: AppCompatActivity() {
             //Se almacenan los datos para que estos puedan ser enviados a la actividad principal
             //Se envían a la función de Almacenamiento para que se escriban en la posición siguiente
             //Esto evita que el array solo tenga un elemento guardado
-
             usuarios_registrados.add(usuario)
             contrasenas_registradas.add(contrasena)
 
-            for(i in usuarios_registrados.indices){
-                Log.d("NANI","onCreate users: " + usuarios_registrados.get(i))
-            }
-
             ////////////// API //////////////////
-
             val apiService = RestApiService()
-            val userInfo = Usuarios(  userName = nombre,
-                userFName = p_apellido,
-                userLName = s_apellido,
-                userID = cedula,
-                userDate = fecha,
-                userPhone = telefono,
-                userPassword = contrasena,
-                userEmail = usuario)
+            val userInfo = Usuarios(userID = null, userDate = "", userEmail = "NOSE@gmail.caca", userFName = "69",
+                userUID = 5050505,
+                userSName = "69",
+                userName = "YIYITO",
+                userPassword = "elmillor",
+                userPhone = 60651388
+            )
 
-            val JsonUser = Gson().toJson(userInfo)  // json string
-            Log.d("JsonUser","onCreateJSONUser " + JsonUser)
-
-            apiService.addUser(userInfo) {
-                if (it?.userName != null) {
-                    // it = newly added user parsed as response
-                    // it?.id = newly added user ID
-                } else {
-                    Log.d("Error de UsuarioJSON","Error registering new user")
-                }
-            }
-
+            apiService.addUser(userInfo)
             this.finish()
         }
 
@@ -116,60 +98,3 @@ class Registrarse: AppCompatActivity() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-//Se declaran las variables para la sección de los spinner de provincia, canton y  dsitrito
-        val provincia = findViewById<Spinner>(R.id.spnprovincia)
-        val canton = findViewById<Spinner>(R.id.spncanton)
-        val distrito = findViewById<Spinner>(R.id.spndistrito)
-
-        //Se toman las listas de arrays creadas en la sección de values/strings del proyecto para
-        //poder trabajar con ellos y mostrar lo que estan almacenan en la interfaz
-        val provincias_lista = resources.getStringArray(R.array.provincias)
-
-        val opciones_provincias = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item, provincias_lista)
-        provincia.adapter = opciones_provincias
-
-        //Se implementa la función propia del spinner para cuando sea seleccionado un elemento del mismo
-        provincia.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
-            //Función implementada cuando es seleccionado uno de los elementos del spinner de provincias
-            //El elemento importante es el id, ya que este dará la posición en el array de opciones
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
-                //Se selecciona la primera letra de la opción de provincia, ya que para esto
-                //Se tiene que llamar de inmediato el spinner de los cantones según dicha provincia
-                //El array de cantones tiene por nombre Iniicial de Provincia en Mayúscula + cantones
-                val seleccion = provincias_lista[position].first().toString() + "cantones"
-                Toast.makeText(this@Registrarse, seleccion,Toast.LENGTH_LONG).show()
-
-            }
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("Not yet implemented")
-            }
-        }
-* */

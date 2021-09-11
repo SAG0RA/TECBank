@@ -6,17 +6,15 @@ import retrofit2.Response
 import retrofit2.Retrofit
 
 class RestApiService {
-    fun addUser(userData: Usuarios, onResult: (Usuarios?) -> Unit){
+    fun addUser(userData: Usuarios){
         val retrofit = ServiceBuilder.buildService(RestApi::class.java)
         retrofit.addUser(userData).enqueue(
             object : Callback<Usuarios> {
                 override fun onFailure(call: Call<Usuarios>, t: Throwable) {
-                    Log.d("Error de UsuarioJSON",t.message)
-                    onResult(null)
+                    Log.d("MAL PAPA MAL",t.message)
                 }
                 override fun onResponse( call: Call<Usuarios>, response: Response<Usuarios>) {
-                    val addedUser = response.body()
-                    onResult(addedUser)
+                    Log.d("Exito","EASY GAME")
                 }
             }
         )

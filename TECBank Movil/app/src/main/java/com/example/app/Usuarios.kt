@@ -3,12 +3,13 @@ package com.example.app
 import com.google.gson.annotations.SerializedName
 
 data class Usuarios (
-    @SerializedName("nombre") val userName: String?,
-    @SerializedName("p_apellido") val userFName: String?,
-    @SerializedName("s_apellido") val userLName: String?,
-    @SerializedName("cedula") val userID: String?,
+    @SerializedName("id") val userID: String?,
     @SerializedName("fecha") val userDate: String?,
-    @SerializedName("telefono") val userPhone: String?,
-    @SerializedName("contrasena") val userPassword: String?,
-    @SerializedName("correo") val userEmail: String?
+    @SerializedName("correo") val userEmail: String?,
+    @SerializedName("p_apellido") val userFName: String?,
+    @SerializedName("cedula") val userUID: Int?,
+    @SerializedName("s_apellido") val userSName: String?,
+    @SerializedName("nombre") val userName: String?,
+    @SerializedName("contraseña") val userPassword: String?,
+    @SerializedName("telefono") val userPhone: Int?
 )
