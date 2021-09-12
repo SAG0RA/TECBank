@@ -11,10 +11,10 @@ class RestApiService {
         retrofit.addUser(userData).enqueue(
             object : Callback<Usuarios> {
                 override fun onFailure(call: Call<Usuarios>, t: Throwable) {
-                    Log.d("MAL PAPA MAL",t.message)
+                    Log.d("Error",t.message)
                 }
                 override fun onResponse( call: Call<Usuarios>, response: Response<Usuarios>) {
-                    Log.d("Exito","EASY GAME")
+                    Log.d("Exito","JSON enviado")
                 }
             }
         )
