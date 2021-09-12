@@ -58,12 +58,12 @@ class Registrarse: AppCompatActivity() {
 
             ////////////// API //////////////////
             val apiService = RestApiService()
-            val userInfo = Usuarios(userID = null, userDate = "", userEmail = "NOSE@gmail.caca", userFName = "69",
-                userUID = 5050505,
-                userSName = "69",
-                userName = "YIYITO",
-                userPassword = "elmillor",
-                userPhone = 60651388
+            val userInfo = Usuarios(userID = null, userDate = "", userEmail = usuario, userFName = p_apellido,
+                userUID = cedula.toInt(),
+                userSName = s_apellido,
+                userName = nombre,
+                userPassword = contrasena,
+                userPhone = telefono.toInt()
             )
 
             apiService.addUser(userInfo)
