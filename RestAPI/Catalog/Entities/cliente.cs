@@ -1,8 +1,7 @@
 using System;
-
-namespace Catalog.Dtos
+namespace Catalog.Entities
 {
-    public record ItemDto
+    public record Cliente
     {
         public Guid Id {get; init;} //Init: Solo le permitimos asignar un valor durante su inicializacion
         public DateTimeOffset Fecha  {get; init;}

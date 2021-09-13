@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Catalog.Dtos
 {
-    public record UpdateItemDto
+    public record UpdateClienteDto
         {
             [Required]
             public string Nombre {get; init;}
