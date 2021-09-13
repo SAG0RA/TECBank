@@ -28,6 +28,7 @@ namespace Catalog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IClientesRepository, InMemClientesRepository>(); //Tenemos solo una copia de nuestro repositorio
+            services.AddSingleton<ICuentasRepository, InMemCuentasRepository>();
             services.AddControllers();
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);

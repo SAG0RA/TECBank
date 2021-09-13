@@ -21,5 +21,18 @@ namespace Catalog
 
             };           
         }
+
+        public static CuentaDto c_AsDto(this Cuenta cuenta)
+        {
+            return new CuentaDto
+            {
+                numero_cuenta = cuenta.numero_cuenta,
+                descripcion = cuenta.descripcion,
+                moneda = cuenta.moneda,
+                tipo_cuenta = cuenta.tipo_cuenta,
+                Acliente = cuenta.Acliente
+            
+            };           
+        }
     }
 }

@@ -9,3 +9,5 @@ RestAPI/Catalog/bin/Release/net5.0/Catalog.pdb
 RestAPI/Catalog/bin/Release/net5.0/publish/
 RestAPI/Catalog/bin/Release/net5.0/
 
+RestAPI/Catalog/bin/Release/net5.0/Catalog.runtimeconfig.dev.json
+*.pdb
