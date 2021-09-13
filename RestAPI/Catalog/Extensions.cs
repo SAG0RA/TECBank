@@ -5,20 +5,33 @@ namespace Catalog
 {
     public static class Extensions
     {
-        public static ItemDto AsDto(this Item item)
+        public static ClienteDto AsDto(this Cliente cliente)
         {
-            return new ItemDto
+            return new ClienteDto
             {
-                Id = item.Id,
-                Nombre = item.Nombre,
-                Fecha = item.Fecha,
-                p_apellido = item.p_apellido,
-                s_apellido = item.s_apellido,
-                correo = item.correo,
-                contraseña = item.contraseña,
-                telefono = item.telefono,
-                cedula = item.cedula
+                Id = cliente.Id,
+                Nombre = cliente.Nombre,
+                Fecha = cliente.Fecha,
+                p_apellido = cliente.p_apellido,
+                s_apellido = cliente.s_apellido,
+                correo = cliente.correo,
+                contraseña = cliente.contraseña,
+                telefono = cliente.telefono,
+                cedula = cliente.cedula
 
+            };           
+        }
+
+        public static CuentaDto c_AsDto(this Cuenta cuenta)
+        {
+            return new CuentaDto
+            {
+                numero_cuenta = cuenta.numero_cuenta,
+                descripcion = cuenta.descripcion,
+                moneda = cuenta.moneda,
+                tipo_cuenta = cuenta.tipo_cuenta,
+                Acliente = cuenta.Acliente
+            
             };           
         }
     }

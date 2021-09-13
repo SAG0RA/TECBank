@@ -27,7 +27,8 @@ namespace Catalog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IItemsRepository, InMemItemsRepository>(); //Tenemos solo una copia de nuestro repositorio
+            services.AddSingleton<IClientesRepository, InMemClientesRepository>(); //Tenemos solo una copia de nuestro repositorio
+            services.AddSingleton<ICuentasRepository, InMemCuentasRepository>();
             services.AddControllers();
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
