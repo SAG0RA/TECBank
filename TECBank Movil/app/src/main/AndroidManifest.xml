@@ -14,13 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:label="RESTEC"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".Registrarse" />
-        <activity android:name=".Menu" />
+        <activity android:name=".Registro" />
+        <activity android:name=".Opciones" />
+        <activity android:name=".Sesion" />
 
 
         <activity android:name=".Inicio"

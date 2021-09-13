@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.content_main.*
 
 
 
-class MainActivity : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,34 +22,33 @@ class MainActivity : AppCompatActivity() {
         val usuario_input = findViewById<EditText>(R.id.inputusuario) as EditText
         val contrasena_input = findViewById<EditText>(R.id.inputcontrasena) as EditText
 
+        val usuario_recibido = intent
+        val contrasena_recibida = intent
+        var usuario_registrado = usuario_recibido.getStringArrayListExtra("Usuarios")
+        var contrasena_registrada = contrasena_recibida.getStringArrayListExtra("Contrasena")
+
         //Botón de acceso a la ventana de Administrar Carrito
         btnentrar.setOnClickListener {
-            var Registro = Registrarse()
-            var usuarios_registrados = Registro.getUsuarios()
-            var contrasenas_registradas = Registro.getContrasenas()
-
 
             val usuario = usuario_input.text.toString()
             val contrasena = contrasena_input.text.toString()
-            Log.d("NANIX2","asdsadaf " + usuario)
-            for(i in usuarios_registrados.indices){
-                Log.d("NANI","onCreate users: " + usuarios_registrados.get(i))
+//            Log.d("Usuarios pasados: ",usuario_registrado.toString())
 
-            }
             //////////////////////   VALIDACIONES ///////////////////////////
-            if ((usuario_input.text.toString().isNullOrEmpty() || contrasena_input.text.toString().isNullOrEmpty())){
+            // IMPORTANTE, SI EL USUARIO NO SE HA REGISTRADO E INTENTA LOGUEAR, LA APLICACION SE CIERRA AUTOMATICAMENTEA
+            // !usuario_registrado.contains(usuario) || !contrasena_registrada.contains(contrasena)
+            if (false){
                 //Se despliega un mensaje de alerta solicitando datos válidos para el ingreso
-
                 Toast.makeText(this, "Favor ingresar datos válidos", Toast.LENGTH_LONG).show()
             }
             else{
-                startActivity(Intent(this, Menu::class.java))
+                startActivity(Intent(this, Opciones::class.java))
             }
         }
 
         //Botón de acceso a la ventana de Registro
         btnregistrarse.setOnClickListener {
-            startActivity(Intent(this, Registrarse::class.java))
+            startActivity(Intent(this, Registro::class.java))
         }
 
     }
