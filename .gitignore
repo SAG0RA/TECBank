@@ -6,5 +6,6 @@ RestAPI/Catalog/obj/
 *.json
 RestAPI/Catalog/bin/Release/net5.0/Catalog.runtimeconfig.dev.json
 RestAPI/Catalog/bin/Release/net5.0/Catalog.pdb
-RestAPI/Catalog/bin/Release/net5.0/Catalog.pdb
-RestAPI/Catalog/bin/Release/net5.0/Catalog.runtimeconfig.dev.json
+RestAPI/Catalog/bin/Release/net5.0/publish/
+RestAPI/Catalog/bin/Release/net5.0/
+
