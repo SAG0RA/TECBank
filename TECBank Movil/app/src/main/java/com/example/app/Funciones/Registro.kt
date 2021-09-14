@@ -1,11 +1,13 @@
-package com.example.app
+package com.example.app.Funciones
 
-import RestApiService
+import RestAPIService
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app.R
+import com.example.app.API.Usuarios
 import kotlinx.android.synthetic.main.registrarse.*
 
 class Registro: AppCompatActivity() {
@@ -54,8 +56,9 @@ class Registro: AppCompatActivity() {
                 Log.d("Usuarios: ", usuarios_registrados.toString())
 
                 ////////////// API //////////////////
-                val apiService = RestApiService()
-                val userInfo = Usuarios(userID = null, userDate = "", userEmail = usuario, userFName = p_apellido,
+                val API = RestAPIService()
+                val userInfo = Usuarios(
+                    userID = null, userDate = "", userEmail = usuario, userFName = p_apellido,
                     userUID = cedula.toInt(),
                     userSName = s_apellido,
                     userName = nombre,
@@ -64,8 +67,7 @@ class Registro: AppCompatActivity() {
                 )
 
                 //Funcion encargada de hacer el POST del nuevo usuario registrado
-                apiService.addUser(userInfo)
-//                this.finish()
+                API.addUser(userInfo)
             }
         }
 

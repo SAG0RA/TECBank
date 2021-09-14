@@ -1,8 +1,10 @@
-package com.example.app
+package com.example.app.Funciones
 
+import RestAPIService
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app.R
 import kotlinx.android.synthetic.main.opciones.*
 
 
@@ -13,7 +15,9 @@ class Opciones: AppCompatActivity() {
         setContentView(R.layout.opciones)
 
         btncuentas.setOnClickListener {
-            startActivity(Intent(this, Registro::class.java))
+            val API = RestAPIService()
+            API.getAccount()
+//            startActivity(Intent(this, Registro::class.java))
         }
 
         btntarjetas.setOnClickListener {

@@ -1,11 +1,11 @@
-package com.example.app
+package com.example.app.Funciones
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.app.R
 import kotlinx.android.synthetic.main.content_main.*
 
 
