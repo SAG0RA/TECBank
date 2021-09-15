@@ -5,5 +5,5 @@ data class Cuenta(
     val descripcion: String,
     val moneda: String,
     val tipo_cuenta: String,
-    val cliente: String
+    val acliente: String
 )

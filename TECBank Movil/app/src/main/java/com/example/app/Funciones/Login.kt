@@ -36,13 +36,13 @@ class Login : AppCompatActivity() {
 
             //////////////////////   VALIDACIONES ///////////////////////////
             // IMPORTANTE, SI EL USUARIO NO SE HA REGISTRADO E INTENTA LOGUEAR, LA APLICACION SE CIERRA AUTOMATICAMENTEA
-            // !usuario_registrado.contains(usuario) || !contrasena_registrada.contains(contrasena)
+            // usuario_registrado.contains(usuario) || !contrasena_registrada.contains(contrasena)
             if (false){
                 //Se despliega un mensaje de alerta solicitando datos válidos para el ingreso
                 Toast.makeText(this, "Favor ingresar datos válidos", Toast.LENGTH_LONG).show()
             }
             else{
-                startActivity(Intent(this, Opciones::class.java))
+                startActivity(Intent(this, OpcionCuentas::class.java))
             }
         }
 

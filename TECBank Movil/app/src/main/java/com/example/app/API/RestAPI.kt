@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface RestAPI {
         @Headers("Content-Type: application/json")
-        @POST("/items")
+        @POST("/clientes")
         fun addUser(@Body userData: Usuarios): Call<Usuarios>
 
         @GET("/cuentas")
