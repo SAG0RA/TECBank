@@ -5,7 +5,7 @@ using Catalog.Entities;
 
 namespace Catalog.Repositorios
 {
-    public class InMemCuentasRepository : ICuentasRepository
+    public class InMemCuentasRepository : ICuentasRepository //En esta clase se detallan los metodos de comunicacion y se precarga el repositorio de cuentas 
     {
         private readonly List<Cuenta> lista_cuentas = new()
         {

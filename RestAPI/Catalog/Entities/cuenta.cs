@@ -1,8 +1,8 @@
 using System;
 namespace Catalog.Entities
 {
-    public record Cuenta
-    {
+    public record Cuenta  //Clase interna de las Cuentas  dentro del api
+    { 
         public Guid numero_cuenta {get; init;} //Init: Solo le permitimos asignar un valor durante su inicializacion
 
         public string descripcion {get; init;}

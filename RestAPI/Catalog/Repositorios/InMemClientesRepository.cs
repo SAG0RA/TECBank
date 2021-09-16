@@ -7,7 +7,7 @@ namespace Catalog.Repositorios
 {
     public class InMemClientesRepository : IClientesRepository
     {
-        private readonly List<Cliente> lista_clientes = new()
+        private readonly List<Cliente> lista_clientes = new() //En esta clase se detallan los metodos de comunicacion y se precarga el repositorio de clientes
         {
             new Cliente { Id = Guid.NewGuid(), Nombre = "Steven", Fecha = System.DateTimeOffset.Now, correo = "stevencm199@gmail.com", cedula = 207950858, p_apellido = "Castro", s_apellido = "Medina", contraseña = "123456", telefono = 84261892}
 

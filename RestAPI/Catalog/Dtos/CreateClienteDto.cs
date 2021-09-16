@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Catalog.Dtos
 {
-    public record CreateClienteDto
+    public record CreateClienteDto //Funcion que crea un DTO de la clase cliente, por medio de esta funcion se pasan los atributos que tendra el cliente y se envian a CreateCliente()
         {
             [Required]
             public string Nombre {get; init;}

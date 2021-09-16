@@ -10,14 +10,14 @@ namespace Catalog.Controllers
 
     //Get /items
     [ApiController]
-    [Route("cuentas")]
+    [Route("cuentas")] //Ruta en donde se encontrara el JSON de las cuentas
     public class CuentasController : ControllerBase
     {
         private readonly ICuentasRepository repository;
 
         public CuentasController(ICuentasRepository repository)
         {
-            this.repository = repository;
+            this.repository = repository; //Le pasamos el json precargado a la aplicación 
 
         }
 
@@ -25,14 +25,14 @@ namespace Catalog.Controllers
         [HttpGet]
         public IEnumerable<CuentaDto> GetCuenta()
         {
-            var cuentas = repository.GetCuentas().Select( cuenta => cuenta.c_AsDto());
+            var cuentas = repository.GetCuentas().Select( cuenta => cuenta.c_AsDto()); //Convierte las cuentas del repositorio en DTOs
             
             return cuentas;
         }
 
         //GET /items/{numero}
         [HttpGet("{numero}")]
-        public ActionResult<CuentaDto> GetCuenta(Guid numero)
+        public ActionResult<CuentaDto> GetCuenta(Guid numero) //Busca una cuenta por numero
         {
             var cuenta = repository.GetCuenta(numero);
 
@@ -50,6 +50,7 @@ namespace Catalog.Controllers
         {
             Cuenta cuenta = new()
             {
+                //Anade una nueva cuenta al repositorio
                 numero_cuenta = Guid.NewGuid(),
                 descripcion = cuentaDto.descripcion,
                 moneda = cuentaDto.moneda, 
@@ -65,7 +66,7 @@ namespace Catalog.Controllers
 
         //PUT /items
         [HttpPut("{numero}")]
-        public ActionResult UpdateCuentaDto(Guid numero, UpdateCuentaDto cuentaDto)
+        public ActionResult UpdateCuentaDto(Guid numero, UpdateCuentaDto cuentaDto) //Actualiza la info de una cuenta
         {
             var existingCuenta = repository.GetCuenta(numero);
 
@@ -86,7 +87,7 @@ namespace Catalog.Controllers
 
         //Delete /items/{numero}
         [HttpDelete("{numero}")]
-        public ActionResult DeleteCuenta(Guid numero)
+        public ActionResult DeleteCuenta(Guid numero) //Borra una cuenta segun su ID
         {
             var existingCuenta = repository.GetCuenta(numero);
 

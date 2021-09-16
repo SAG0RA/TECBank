@@ -4,7 +4,7 @@ using Catalog.Entities;
 
 namespace Catalog.Repositorios
 {
-//clase necesaria para la inyeccion de dependencia
+//Declararion de metodos que maneja el repositorio de Cuentas para comunicarse con otras aplicaciones
    public interface ICuentasRepository
     {
         Cuenta GetCuenta(Guid numero); //GET/{id} request

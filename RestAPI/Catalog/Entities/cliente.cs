@@ -1,7 +1,7 @@
 using System;
 namespace Catalog.Entities
 {
-    public record Cliente
+    public record Cliente //Clase interna del Cliente dentro del api
     {
         public Guid Id {get; init;} //Init: Solo le permitimos asignar un valor durante su inicializacion
         public DateTimeOffset Fecha  {get; init;}
