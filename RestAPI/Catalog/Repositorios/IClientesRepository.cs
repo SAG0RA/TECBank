@@ -4,7 +4,7 @@ using Catalog.Entities;
 
 namespace Catalog.Repositorios
 {
-//clase necesaria para la inyeccion de dependencia
+//Declaracion de metodos que maneja el repositorio de Clientes para comunicarse con otras aplicaciones
    public interface IClientesRepository
     {
         Cliente GetCliente(Guid id); //GET/{id} request

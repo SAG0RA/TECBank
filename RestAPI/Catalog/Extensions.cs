@@ -5,6 +5,7 @@ namespace Catalog
 {
     public static class Extensions
     {
+        //Metodos que necesitan los objetos de los repositorios para comunicarse con su version de DTOs
         public static ClienteDto AsDto(this Cliente cliente)
         {
             return new ClienteDto

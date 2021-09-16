@@ -10,12 +10,12 @@ namespace Catalog.Controllers
 
     //Get /clientes
     [ApiController]
-    [Route("clientes")]
+    [Route("clientes")] //Ruta en donde se encontrara el JSON de los clientes
     public class ClientesController : ControllerBase
     {
         private readonly IClientesRepository repository;
 
-        public ClientesController(IClientesRepository repository)
+        public ClientesController(IClientesRepository repository) //Le pasamos el json precargado a la aplicación 
         {
             this.repository = repository;
 
@@ -25,31 +25,32 @@ namespace Catalog.Controllers
         [HttpGet]
         public IEnumerable<ClienteDto> GetClientes()
         {
-            var clientes = repository.GetClientes().Select( clientes => clientes.AsDto());
+            var clientes = repository.GetClientes().Select( clientes => clientes.AsDto()); //Toma la información del repositorio interno y lo convierte en un DTO para desplegarlo en JSON
             
             return clientes;
         }
 
         //GET /clientes/{id}
         [HttpGet("{id}")]
-        public ActionResult<ClienteDto> GetCliente(Guid id)
+        public ActionResult<ClienteDto> GetCliente(Guid id) //Consigue un cliente en particular segun su ID
         {
             var cliente = repository.GetCliente(id);
 
             if (cliente is null)
             {
-                return NotFound();
+                return NotFound(); //Si el cliente no se encuentra retornar null
             }
 
-            return cliente.AsDto();
-        }
+            return cliente.AsDto(); //Convertir el objeto encontrado en DTO
+        } 
 
         //POST /cliente
         [HttpPost]
         public ActionResult<ClienteDto> CreateCliente(CreateClienteDto clienteDto)
         {
             Cliente cliente = new()
-            {
+            { 
+                //Pasar todos los desde el DTO a un objeto del repositorio
                 Id = Guid.NewGuid(),
                 Nombre = clienteDto.Nombre,
                 Fecha = DateTimeOffset.UtcNow, 
@@ -69,7 +70,7 @@ namespace Catalog.Controllers
 
         //PUT /clientes
         [HttpPut("{id}")]
-        public ActionResult UpdateCliente(Guid id, UpdateClienteDto clienteDto)
+        public ActionResult UpdateCliente(Guid id, UpdateClienteDto clienteDto) //Actualiza la informacion de un cliente segun su ID 
         {
             var existingCliente = repository.GetCliente(id);
 
@@ -78,18 +79,18 @@ namespace Catalog.Controllers
                 return NotFound();
             }
 
-            Cliente updatedCliente = existingCliente with {
+            Cliente updatedCliente = existingCliente with { //Reemplaza info 
                 Nombre = clienteDto.Nombre
             };
 
-            repository.UpdateCliente(updatedCliente);
+            repository.UpdateCliente(updatedCliente); //Anade el cliente actualizado al repositorio
 
             return NoContent();
         }
 
         //Delete /items/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteCliente(Guid id)
+        public ActionResult DeleteCliente(Guid id) //Busca el cliente por ID y lo elimina
         {
             var existingCliente = repository.GetCliente(id);
 
