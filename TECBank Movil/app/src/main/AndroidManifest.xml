@@ -20,9 +20,9 @@
 
         </activity>
         <activity android:name=".Funciones.Registro" />
-        <activity android:name=".Funciones.Opciones" />
         <activity android:name=".Funciones.OpcionCuentas" />
         <activity android:name=".Funciones.Tranferencias" />
+        <activity android:name=".Funciones.Tarjetas" />
 
 
         <activity android:name=".Funciones.Inicio"

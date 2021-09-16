@@ -32,12 +32,12 @@ class Login : AppCompatActivity() {
 
             val usuario = usuario_input.text.toString()
             val contrasena = contrasena_input.text.toString()
-//            Log.d("Usuarios pasados: ",usuario_registrado.toString())
+
 
             //////////////////////   VALIDACIONES ///////////////////////////
             // IMPORTANTE, SI EL USUARIO NO SE HA REGISTRADO E INTENTA LOGUEAR, LA APLICACION SE CIERRA AUTOMATICAMENTEA
             // usuario_registrado.contains(usuario) || !contrasena_registrada.contains(contrasena)
-            if (false){
+            if (usuario.isNullOrEmpty() || contrasena.isNullOrEmpty() || !usuario_registrado.contains(usuario) || !contrasena_registrada.contains(contrasena)){
                 //Se despliega un mensaje de alerta solicitando datos válidos para el ingreso
                 Toast.makeText(this, "Favor ingresar datos válidos", Toast.LENGTH_LONG).show()
             }

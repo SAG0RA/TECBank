@@ -8,6 +8,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class RestAPIService {
+    /**Funcion encargada de enviar la solicitud POST al REST API a /clientes
+     * @param userData: Datos que se van a enviar
+     */
     fun addUser(userData: Usuarios) {
         val retrofit = ServiceBuilder.buildService(RestAPI::class.java)
         retrofit.addUser(userData).enqueue(
@@ -23,16 +26,19 @@ class RestAPIService {
         )
     }
 
+    /**Funcion encargada de enviar la solicitud GET al REST API en /cuentas
+     * @param detalles: la pantalla donde se mostraran los datos de la cuenta
+     */
     fun getAccount(detalles: TextView) {
         val retrofit = ServiceBuilder.buildService(RestAPI::class.java)
         retrofit.getAccount().enqueue(object : Callback<List<Cuenta>> {
             override fun onResponse(call: Call<List<Cuenta>>, response: Response<List<Cuenta>>) {
                 val datos = response.body()
-
+// Aqui se envian los datos correspondientes
                 if (datos != null) {
                     OpcionCuentas().verCuenta(datos,detalles)
                 }
-
+// Print para verificar que se haya hecho bien la solicitud
                 for (c in datos!!)
                     Log.d(
                         "CUENTA: ",
