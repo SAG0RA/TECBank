@@ -1,7 +1,7 @@
-package com.example.app
+package com.example.app.API
 
 import com.google.gson.annotations.SerializedName
-
+// Clase encargada de administar los datos serializados de los clientes en el API
 data class Usuarios (
     @SerializedName("id") val userID: String?,
     @SerializedName("fecha") val userDate: String?,

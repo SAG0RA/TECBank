@@ -7,21 +7,168 @@
     android:background="@color/colorPrimary">
 
     <TextView
-        android:id="@+id/lblrestec4"
-        android:layout_width="208dp"
-        android:layout_height="72dp"
+        android:id="@+id/lblrestec14"
+        android:layout_width="173dp"
+        android:layout_height="54dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="MENU"
+        android:text="Contraseña:"
         android:textColor="@color/cardview_light_background"
-        android:textSize="40sp"
+        android:textSize="14sp"
         app:fontFamily="@font/cairo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/lblrestec13"
+        android:layout_width="173dp"
+        android:layout_height="54dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Usuario(correo):"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <TextView
+        android:id="@+id/lblrestec12"
+        android:layout_width="173dp"
+        android:layout_height="54dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Teléfono:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <TextView
+        android:id="@+id/lblrestec11"
+        android:layout_width="173dp"
+        android:layout_height="54dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Cédula:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
+
+    <TextView
+        android:id="@+id/lblrestec10"
+        android:layout_width="173dp"
+        android:layout_height="54dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="1erApellido:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <Button
+        android:id="@+id/btnsalir"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:text="Salir"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/lblrestec6"
+        android:layout_width="264dp"
+        android:layout_height="66dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Cédula:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblrestec2"
+        android:layout_width="173dp"
+        android:layout_height="54dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="2doApellido:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <TextView
+        android:id="@+id/lblrestec"
+        android:layout_width="177dp"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Nombre:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <TextView
+        android:id="@+id/lblrestec4"
+        android:layout_width="264dp"
+        android:layout_height="66dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Bienvenido a TECBank"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        app:fontFamily="@font/cairo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
 
     <EditText
         android:id="@+id/inputnombre"
@@ -29,11 +176,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nombre"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.097" />
@@ -44,59 +190,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Segundo Apellido"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
-
-    <EditText
-        android:id="@+id/inputcanton"
-        android:layout_width="146dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Canton"
-        android:textColor="#c34129"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
-
-    <EditText
-        android:id="@+id/inputdistrito"
-        android:layout_width="143dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Dsitrito"
-        android:textColor="#c34129"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-
-    <EditText
-        android:id="@+id/inputprovincia"
-        android:layout_width="136dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Provincia"
-        android:textColor="#c34129"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.228" />
 
     <EditText
         android:id="@+id/inputpapellido"
@@ -104,14 +204,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Primer Apellido"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.163" />
 
     <EditText
         android:id="@+id/inputtelefono"
@@ -119,31 +218,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="Teléfono"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
-
-    <EditText
-        android:id="@+id/inputfechac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:ems="10"
-        android:focusable="auto"
-        android:inputType="number"
-        android:text="Fecha"
-        android:textColor="#c34129"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintVertical_bias="0.358" />
 
     <EditText
         android:id="@+id/inputcorreor"
@@ -151,14 +232,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="correo"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintVertical_bias="0.425" />
 
     <EditText
         android:id="@+id/inputcontrasenar"
@@ -166,14 +246,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Contraseña"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <EditText
         android:id="@+id/inputcedula"
@@ -181,27 +260,23 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="Cédula"
         android:textColor="#c34129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354" />
+        app:layout_constraintVertical_bias="0.294" />
 
     <Button
         android:id="@+id/btnregistrar"
-        android:layout_width="104dp"
-        android:layout_height="55dp"
-        android:background="#bdbda3"
+        android:layout_width="115dp"
+        android:layout_height="51dp"
         android:text="Registrar"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.636" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,21 +9,23 @@
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="RESTEC"
+        android:label="TEC Bank"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".MainActivity"
-            android:label="RESTEC"
+            android:name=".Funciones.Login"
+            android:label="TEC Bank"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".Registrarse" />
-        <activity android:name=".Menu" />
+        <activity android:name=".Funciones.Registro" />
+        <activity android:name=".Funciones.OpcionCuentas" />
+        <activity android:name=".Funciones.Tranferencias" />
+        <activity android:name=".Funciones.Tarjetas" />
 
 
-        <activity android:name=".Inicio"
+        <activity android:name=".Funciones.Inicio"
             android:theme="@style/AppTheme.NoActionBar">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
